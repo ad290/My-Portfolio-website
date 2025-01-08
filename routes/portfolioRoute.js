@@ -1,7 +1,7 @@
 const express = require("express");
 const { sendEmailController } = require("../controllers/portfolioContoller");
 
-//router object
+//router object instanciated
 const router = express.Router();
 
 //routes
