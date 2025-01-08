@@ -38,7 +38,7 @@ const sendEmailController = (req, res) => {
 
     return res.status(200).send({
       success: true,
-      message: "Your Message Send Successfully",
+      message: "Your Message has been Send Successfully",
     });
   } catch (error) {
     console.log(error);
