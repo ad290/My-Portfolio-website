@@ -1,47 +1,78 @@
+:root {
+  --main-color: #138781;
+  --subtitle-color: #1e1e2c;
+  --bg-light: rgba(128, 128, 128, 0.1);
+  --bg-dark: rgba(255, 255, 255, 0.095);
+}
+
 .education {
-  padding: 100px 0px;
-  margin: 50px 0px;
-  margin-left: 120px;
-  background-color: rgba(128, 128, 128, 0.101);
+  padding: clamp(60px, 8vw, 100px) clamp(10px, 2vw, 50px);
+  margin: clamp(30px, 5vw, 50px) 0;
+  margin-left: clamp(50px, 8vw, 120px);
+  background-color: var(--bg-light);
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .education hr {
-  color: #138781;
-  width: 400px;
-  margin: 10px auto;
+  border: none;
+  height: 2px;
+  background-color: var(--main-color);
+  width: clamp(200px, 50%, 400px);
+  margin: 20px auto;
 }
 
 .education h2 {
-  font-weight: bold;
-  color: #138781;
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 32px);
+  color: var(--main-color);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .education .vertical-timeline-element-title {
-  color: #138781;
+  color: var(--main-color);
+  font-weight: 600;
+  font-size: clamp(16px, 2vw, 24px);
 }
 
 .education .vertical-timeline-element-subtitle {
-  color: #1e1e2c;
+  color: var(--subtitle-color);
+  font-size: clamp(14px, 1.5vw, 18px);
+  margin-bottom: 10px;
 }
 
 /* ========= DARK MODE ============ */
-
 #dark .education {
-  background-color: rgba(255, 255, 255, 0.095);
+  background-color: var(--bg-dark);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* ========================== */
 @media (max-width: 600px) {
   .education {
     margin: 0;
-    padding: 0;
+    padding: clamp(20px, 5vw, 40px);
     margin-top: 30px;
   }
+  
   .education h2 {
-    padding-top: 20px;
+    padding-top: 10px;
+    font-size: clamp(18px, 4vw, 24px);
   }
+  
   .education hr {
-    width: 280px;
+    width: 70%;
     margin-bottom: 10px;
+  }
+  
+  .education .vertical-timeline-element-title {
+    font-size: 18px;
+  }
+  
+  .education .vertical-timeline-element-subtitle {
+    font-size: 16px;
   }
 }

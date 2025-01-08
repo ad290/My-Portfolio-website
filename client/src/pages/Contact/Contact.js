@@ -10,7 +10,7 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
 
-  //handle submit button
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -61,9 +61,23 @@ const Contact = () => {
                     <div className="row">
                       <h6>
                         Contact With
-                        <BsLinkedin color="blue" size={30} className="ms-2" />
-                        <BsGithub color="black" size={30} className="ms-2" />
-                        <BsFacebook color="blue" size={30} className="ms-2" />
+                        <a
+  href="https://www.linkedin.com/in/aditya-pawar-776b12285/"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{ marginRight: "20px" }}
+>
+  <BsLinkedin color="blue" size={30} className="ms-2" />
+</a>
+
+<a
+  href="https://github.com/ad290"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <BsGithub color="black" size={30} className="ms-2" />
+</a>
+
                       </h6>
                     </div>
 

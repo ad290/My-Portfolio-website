@@ -1,14 +1,36 @@
+:root {
+  --primary-color: gray;
+  --secondary-color: #b0a4a4;
+  --background-light: #fff;
+  --background-dark: rgba(0, 0, 0, 0.15);
+  --text-color-light: gray;
+  --text-color-dark: #b0a4a4;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
 .about {
-  margin: 30px 0px;
+  margin: 30px auto;
   padding: 20px;
   margin-left: 200px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-img img {
   border-radius: 10px;
   width: 100%;
   height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about-img img:hover {
+  transform: scale(1.05);
 }
 
 .about-content {
@@ -16,40 +38,62 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .about-content h1 {
-  color: gray;
-  font-family: cursive;
-  border-bottom: 2px solid gray;
+  color: var(--primary-color);
+  font-family: "Courier New", cursive;
+  border-bottom: 2px solid var(--primary-color);
   text-align: center;
+  padding-bottom: 10px;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
+
 .about-content p {
   text-align: justify;
   padding: 20px;
+  line-height: 1.6;
 }
-
-/* ======== DARK MODE ========= */
 
 #dark .about {
   box-shadow: none;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: var(--background-dark);
 }
 
 #dark .about-content h1 {
-  color: #b0a4a4;
-  border-bottom: 2px solid #b0a4a4;
+  color: var(--text-color-dark);
+  border-bottom-color: var(--text-color-dark);
 }
 
-/* ================================ */
+#dark .about-content p {
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .about {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .about-img img {
+    height: 300px;
+  }
+}
+
 @media (max-width: 600px) {
   .about {
-    margin: 0;
-    padding: 0;
-    margin-top: 20px;
-    width: 100%;
+    margin: 10px;
+    padding: 10px;
   }
+
   .about-content h1 {
+    font-size: 1.5rem;
     margin-top: 10px;
+  }
+
+  .about-content p {
+    padding: 10px;
+    font-size: 0.9rem;
   }
 }

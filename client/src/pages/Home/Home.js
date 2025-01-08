@@ -24,14 +24,13 @@ const Home = () => {
         </div>
         <div className="container home-content">
           <Fade right>
-            <h2>Hi 👋 I'm a</h2>
+            <h2>Hi 👋 I'm Aditya Pawar </h2>
             <h1>
               <Typewriter
                 options={{
                   strings: [
                     "FullStack Developer!",
                     "Mern Stack Developer!",
-                    "React native developer!",
                   ],
                   autoStart: true,
                   loop: true,
@@ -43,7 +42,7 @@ const Home = () => {
             <div className="home-buttons">
               <a
                 className="btn btn-hire"
-                href="https://api.whatsapp.com/send?phone=1234567890"
+                href="https://api.whatsapp.com/send?phone=8217660375"
                 rel="noreferrer"
                 target="_blank"
               >

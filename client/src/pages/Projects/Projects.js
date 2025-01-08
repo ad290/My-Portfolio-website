@@ -1,101 +1,113 @@
 import React from "react";
 import "./Projects.css";
 import Spin from "react-reveal/Spin";
+
 const Projects = () => {
   return (
     <>
-      <div className="continer project" id="projects">
+      <div className="container project" id="projects">
         <h2 className="col-12 mt-3 mb-1 text-center text-uppercase">
-          TOP RECENT PROJECTS
+          Top Recent Projects
         </h2>
         <hr />
         <p className="pb-3 text-center">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia a
-          odit ab, eligendi cupiditate, minima quasi excepturi modi et quo
-          delectus, iusto dolor atque aliquam aspernatur eveniet! Ipsam eum
-          nobis omnis id voluptatibus quas eos maxime ipsum facere numquam,
-          voluptate qui et animi doloribus nulla eius molestiae unde tempore ad
+          I have developed full-stack applications, including a Chat App, Notes App, and Learning Management System (LMS), showcasing expertise in building scalable, secure, and user-friendly solutions.
+          <br />
+          <strong>Chat App:</strong> Real-time messaging with user authentication and end-to-end encryption.
+          <br />
+          <strong>Notes App:</strong> Productivity tool for creating, organizing, and searching notes.
+          <br />
+          <strong>LMS:</strong> Platform for course management, student engagement, and progress tracking with role-based access.
         </p>
-        {/* card design */}
+        {/* Card Design */}
         <div className="row" id="ads">
           <Spin>
+            {/* Chat App Card */}
             <div className="col-md-4">
               <div className="card rounded">
                 <div className="card-image">
-                  <span className="card-notify-badge">Full stack</span>
-                  <img
-                    src="https://unctad.org/sites/default/files/2021-03/2021-03-15_eCommerceCOVID19report-1-1220x675px.jpg"
-                    alt="project1"
-                  />
+                  <span className="card-notify-badge">Full Stack</span>
+                  <img src={require("./ChatApp.png")} alt="Chat Application" />
                 </div>
-                <div className="card-image-overly m-auto mt-3">
-                  <span className="card-detail-badge">Node</span>
-                  <span className="card-detail-badge">Express</span>
-                  <span className="card-detail-badge">react</span>
-                  <span className="card-detail-badge">Mongodb</span>
+                <div className="card-image-overlay m-auto mt-3">
+                  <span className="card-detail-badge">Node.js</span>
+                  <span className="card-detail-badge">Express.js</span>
+                  <span className="card-detail-badge">React</span>
+                  <span className="card-detail-badge">MongoDB</span>
                 </div>
                 <div className="card-body text-center">
                   <div className="ad-title m-auto">
-                    <h6 className="text-uppercase">
-                      Techinfoyt Shopping Website
-                    </h6>
+                    <h6 className="text-uppercase">Chat Application</h6>
                   </div>
                   <a
                     className="ad-btn"
-                    href="https://github.com/techinfo-youtube/ecommerce-app-2023"
+                    href="https://github.com/ad290/My-Chat-App"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     View
                   </a>
                 </div>
               </div>
             </div>
+
+            {/* LMS Card */}
             <div className="col-md-4">
               <div className="card rounded">
                 <div className="card-image">
-                  <span className="card-notify-badge">Mobile App</span>
+                  <span className="card-notify-badge">Full Stack</span>
                   <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR356D-1YtSagN4-_ZdjZ5H9o6PKUO4h12dvw&usqp=CAU"
-                    alt="project2"
+                    src={require("./LearningApp.png")}
+                    alt="Learning Management System"
                   />
                 </div>
-                <div className="card-image-overly m-auto mt-3">
-                  <span className="card-detail-badge">React Native</span>
-
-                  <span className="card-detail-badge">IOS / ANDROID</span>
+                <div className="card-image-overlay m-auto mt-3">
+                  <span className="card-detail-badge">Node.js</span>
+                  <span className="card-detail-badge">Express.js</span>
+                  <span className="card-detail-badge">React</span>
+                  <span className="card-detail-badge">MongoDB</span>
                 </div>
                 <div className="card-body text-center">
                   <div className="ad-title m-auto">
-                    <h5 className="text-uppercase">Techinfoyt Coding App</h5>
+                    <h5 className="text-uppercase">
+                      Learning Management System
+                    </h5>
                   </div>
                   <a
                     className="ad-btn"
-                    href="https://github.com/techinfo-youtube/ecommerce-app-2023"
+                    href="https://github.com/ad290/Leraning-Management-System-"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     View
                   </a>
                 </div>
               </div>
             </div>
+
+            {/* Notes App Card */}
             <div className="col-md-4">
               <div className="card rounded">
                 <div className="card-image">
-                  <span className="card-notify-badge">Backend</span>
-                  <img
-                    src="https://www.nextwebi.com/assets/img/img-source/mobile-top-banner-28.png"
-                    alt="project1"
-                  />
+                  <span className="card-notify-badge">Full Stack</span>
+                  <img src={require("./NotesApp.png")} alt="Notes Application" />
                 </div>
-                <div className="card-image-overly m-auto mt-3">
-                  <span className="card-detail-badge">Node</span>
-                  <span className="card-detail-badge">Express</span>
-
-                  <span className="card-detail-badge">NoSQL</span>
+                <div className="card-image-overlay m-auto mt-3">
+                  <span className="card-detail-badge">Node.js</span>
+                  <span className="card-detail-badge">Express.js</span>
+                  <span className="card-detail-badge">React</span>
+                  <span className="card-detail-badge">MongoDB</span>
                 </div>
                 <div className="card-body text-center">
                   <div className="ad-title m-auto">
-                    <h5 className="text-uppercase">Techinfoyt Job Portal</h5>
+                    <h5 className="text-uppercase">Notes Application</h5>
                   </div>
-                  <a className="ad-btn" href="view">
+                  <a
+                    className="ad-btn"
+                    href="https://github.com/ad290/Note_taking_app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     View
                   </a>
                 </div>
