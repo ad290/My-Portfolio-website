@@ -1,17 +1,18 @@
 import React from "react";
 import { useTheme } from "../../context/ThemeContext";
 import Typewriter from "typewriter-effect";
-import Resume from "../../assets/docs/resume.txt";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-import "./home.css";
 import Fade from "react-reveal/Fade";
+import "./home.css";
 
 const Home = () => {
   const [theme, setTheme] = useTheme();
-  //handle theme
+
+  // Handle theme toggle
   const handleTheme = () => {
-    setTheme((prevState) => (prevState === "light" ? "dark" : "light"));
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
+
   return (
     <>
       <div className="container-fluid home-container" id="home">
@@ -22,33 +23,38 @@ const Home = () => {
             <BsFillSunFill size={30} />
           )}
         </div>
+
         <div className="container home-content">
           <Fade right>
-            <h2>Hi 👋 I'm Aditya Pawar </h2>
+            <h2>Hi 👋 I'm Aditya Pawar</h2>
             <h1>
               <Typewriter
                 options={{
-                  strings: [
-                    "FullStack Developer!",
-                    "Mern Stack Developer!",
-                  ],
+                  strings: ["FullStack Developer!", "MERN Stack Developer!"],
                   autoStart: true,
                   loop: true,
                 }}
               />
             </h1>
           </Fade>
+
           <Fade bottom>
             <div className="home-buttons">
               <a
                 className="btn btn-hire"
                 href="https://api.whatsapp.com/send?phone=8217660375"
-                rel="noreferrer"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Hire Me
               </a>
-              <a className="btn btn-cv" href={Resume} download="your_name.pdf">
+
+              <a
+                className="btn btn-cv"
+                href="https://drive.google.com/file/d/1XHBvNtueyJAHYJkyBwDcr3iZsX4jrLfL/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 My Resume
               </a>
             </div>
